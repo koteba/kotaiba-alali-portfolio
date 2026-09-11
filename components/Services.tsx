@@ -1,12 +1,12 @@
 'use client';
 
-import { Code2, Database, ListChecks } from 'lucide-react';
+import { Code2, Database, GraduationCap, ListChecks } from 'lucide-react';
 import { useContent } from '@/lib/content-context';
 import { useLocale } from '@/lib/locale-context';
 import { sectionLabels } from '@/lib/ui-strings';
 import { AnimatedSection, StaggerGroup, StaggerItem } from './AnimatedSection';
 
-const ICONS = [Code2, ListChecks, Database];
+const ICONS = [Code2, ListChecks, Database, GraduationCap];
 
 export function Services() {
   const { content } = useContent();

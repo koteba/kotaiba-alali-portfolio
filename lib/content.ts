@@ -62,24 +62,32 @@ export const defaultContent: SiteContent = {
       id: 'web-development',
       title: { en: 'Web Development', ar: 'تطوير الويب' },
       description: {
-        en: 'Reliable, responsive web products built with modern front-end and back-end tools.',
-        ar: 'منتجات ويب موثوقة ومتجاوبة مبنية بأدوات حديثة للواجهة الأمامية والخلفية.',
+        en: 'Complete responsive websites and web applications for portfolios, businesses, and custom projects, from interface to deployment.',
+        ar: 'تصميم وتطوير مواقع وتطبيقات ويب متجاوبة للملفات الشخصية والشركات والمشاريع الخاصة، من الواجهة حتى النشر.',
       },
     },
     {
       id: 'business-analysis',
       title: { en: 'Business Analysis', ar: 'تحليل الأعمال' },
       description: {
-        en: 'Clear requirements, user stories, and workflows that turn business needs into buildable plans.',
-        ar: 'متطلبات وقصص مستخدم ومسارات عمل واضحة تحوّل احتياجات العمل إلى خطط قابلة للتنفيذ.',
+        en: 'I turn an idea into a clear project plan through requirements, user stories, process mapping, and practical recommendations.',
+        ar: 'أحوّل الفكرة إلى خطة مشروع واضحة من خلال جمع المتطلبات، وقصص المستخدم، وتحليل الإجراءات، والتوصيات العملية.',
       },
     },
     {
       id: 'systems-and-data',
       title: { en: 'Systems & Data', ar: 'الأنظمة والبيانات' },
       description: {
-        en: 'Practical database design, integrations, and internal systems that scale with the work.',
-        ar: 'تصميم عملي لقواعد البيانات والتكاملات والأنظمة الداخلية القابلة للتوسع مع العمل.',
+        en: 'Useful dashboards, database structures, integrations, and internal tools that organize information and improve daily work.',
+        ar: 'لوحات معلومات وقواعد بيانات وتكاملات وأدوات داخلية تنظّم المعلومات وتسهّل العمل اليومي.',
+      },
+    },
+    {
+      id: 'web-and-analysis-courses',
+      title: { en: 'Web & Analysis Courses', ar: 'كورسات الويب وتحليل الأعمال' },
+      description: {
+        en: 'Practical one-to-one or team courses in web development, programming fundamentals, project building, and business analysis.',
+        ar: 'كورسات عملية فردية أو جماعية في تطوير الويب، وأساسيات البرمجة، وبناء المشاريع، وتحليل الأعمال.',
       },
     },
   ],
