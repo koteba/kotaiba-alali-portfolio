@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Arabic type reads visually smaller than Latin at the same pixel size,
+   and the brief asked for a bigger, more comfortable Arabic type scale —
+   so we bump the root size a notch whenever the page is RTL. Because the
+   rest of the UI is built on Tailwind's rem-based scale, this one change
+   scales every heading, paragraph, and button proportionally. */
+html[dir='rtl'] {
+  font-size: 17.5px;
+}
+
+@media (min-width: 640px) {
+  html[dir='rtl'] {
+    font-size: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  @apply bg-paper text-ink antialiased dark:bg-ink dark:text-paper;
+  font-feature-settings: 'ss01' on, 'ss02' on;
+}
+
+[dir='rtl'] body {
+  @apply font-arabic;
+  letter-spacing: 0;
+  line-height: 1.85;
+}
+
+/* Headings use the Latin display face (Space Grotesk) by default, which has
+   no Arabic glyphs. Rather than branch every component on locale, we swap
+   the display face for the Arabic face at the CSS level whenever the page
+   is RTL — so every h1/h2/h3 automatically renders in IBM Plex Sans Arabic,
+   at a slightly heavier weight to keep the same "display" presence. */
+[dir='rtl'] .font-display {
+  font-family: var(--font-plex-arabic), sans-serif;
+  font-weight: 700;
+}
+
+/* A quiet, premium ambient wash behind the whole page in dark mode —
+   not just the hero — so scrolling never hits a flat black wall. */
+.dark body {
+  background-image: radial-gradient(120% 60% at 20% -10%, rgba(37, 99, 235, 0.14) 0%, rgba(7, 20, 38, 0) 55%),
+    radial-gradient(90% 50% at 100% 15%, rgba(20, 184, 166, 0.09) 0%, rgba(7, 20, 38, 0) 60%);
+  background-attachment: fixed;
+}
+
+/* Selection color follows the brand gradient identity */
+::selection {
+  background-color: rgba(20, 184, 166, 0.35);
+}
+
+/* Slim, quiet scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(15, 118, 110, 0.48);
+  border-radius: 999px;
+}
+
+/* Visible keyboard focus everywhere, without a default outline box */
+:focus-visible {
+  outline: 2px solid #14b8a6;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10;
+}
+
+.text-gradient {
+  @apply bg-bridge-gradient bg-clip-text text-transparent;
+}
+
+.divider-hairline {
+  @apply h-px w-full bg-paper-line dark:bg-ink-line;
+}
