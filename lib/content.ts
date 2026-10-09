@@ -320,6 +320,34 @@ export const defaultContent: SiteContent = {
         ar: 'أكثر من 1000 مستخدم نشط منذ الإطلاق',
       },
     },
+    {
+      id: 'thiqa',
+      name: {
+        en: 'Thiqa',
+        ar: 'ثقة',
+      },
+      description: {
+        en: 'Thiqa is a service directory for Syria, helping users discover trusted providers, compare reviews, and request services with ease.',
+        ar: 'ثقة منصة دليل خدمات في سوريا، تساعد المستخدمين على العثور على مزودي خدمات موثوقين ومقارنة تقييماتهم وطلب الخدمات بسهولة.',
+      },
+      images: [
+        '/thiqa/Screenshot 2026-10-09 234702.png',
+        '/thiqa/Screenshot 2026-10-09 234725.png',
+        '/thiqa/Screenshot 2026-10-09 234739.png',
+        '/thiqa/Screenshot 2026-10-09 234754.png',
+        '/thiqa/Screenshot 2026-10-09 234910.png',
+        '/thiqa/Screenshot 2026-10-09 234945.png',
+        '/thiqa/Screenshot 2026-10-09 235023.png',
+        '/thiqa/Screenshot 2026-10-09 235037.png',
+      ],
+      tech: [],
+      link: '',
+      repo: '',
+      metric: {
+        en: 'Discover providers, compare reviews, and request services in one place',
+        ar: 'اكتشاف مزودي الخدمات ومقارنة تقييماتهم وطلب الخدمات في مكان واحد',
+      },
+    },
   ],
 
   certifications: [
